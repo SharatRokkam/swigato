@@ -1,4 +1,5 @@
 import express from "express";
+import { Router } from "express";
 import auth from "../middleware/auth.js";
 import {
   createRestaurant,
@@ -15,3 +16,5 @@ router.get("/", getRestaurants);
 router.get("/:id", getRestaurant);
 router.patch("/:id", updateRestaurant);
 router.delete("/:id", deleteRestaurant);
+
+export default router;
